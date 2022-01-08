@@ -1,0 +1,145 @@
+#==============================================================================
+#			Simple Conky - Manjaro			
+
+#	Date  :02/11/2021
+#	Author:iamvk1437k
+#	repo  :https://github.com/iamvk1437k/linuxdotfilesvk
+#==============================================================================
+# conky configuration
+
+# Set to yes if you want Conky to be forked in the background
+background yes
+
+# Update interval in seconds
+update_interval 1
+
+# number of cpu samples to average
+# set to 1 to disable averaging
+cpu_avg_samples 2
+
+# number of net samples to average
+# set to 1 to disable averaging
+net_avg_samples 2
+
+# Subtract file system buffers from used memory?
+no_buffers yes
+double_buffer yes
+text_buffer_size 2048
+
+# Add spaces to keep things from moving about?  This only affects certain objects.
+use_spacer right
+
+# This is the number of times Conky will update before quitting.
+# Set to zero to run forever.
+total_run_times 0
+
+# Gap between borders of screen and text
+# same thing as passing -x at command line
+gap_x 40
+gap_y 80
+
+# Minimum size of text area
+minimum_size 100 50
+maximum_width 600
+
+
+# Create own window instead of using desktop (required in nautilus)
+own_window yes
+own_window_type dock
+own_window_transparent yes
+own_window_argb_visual yes
+own_window_argb_visual no
+own_window_colour 000000
+own_window_argb_value 0
+own_window_hints undecorated,below,sticky,skip_taskbar,skip_pager
+
+# Text alignment, other possible values are commented
+#alignment top_left
+alignment top_right
+#alignment bottom_left
+#alignment bottom_right
+#alignment top_middle
+
+
+# Draw shades?
+draw_shades no
+
+# Draw outlines?
+draw_outline no
+
+# Draw borders around text
+draw_borders no
+draw_graph_borders no
+
+# Stippled borders?
+stippled_borders 0
+
+# border margins
+border_margin 4
+
+# border width
+border_width 1
+
+
+# Force UTF8? note that UTF8 support required XFT
+override_utf8_locale yes
+
+# Use Xft?
+use_xft yes
+
+# Xft font when Xft is enabled
+xftfont Bitstream Monospace:size=9
+
+# Text alpha when using Xft
+xftalpha 0.5
+
+# set to yes if you want all text to be in uppercase
+uppercase no
+
+# Default colors and also border colors
+default_color white
+default_shade_color black
+default_outline_color white
+# Shades of Gray
+color1 f8f8f2 #Dracula-Foreground
+color2 AAAAAA
+color3 888888 
+color4 ffb86c # Dracula-Orange
+color5 8be9fd # Dracula-Cryn
+color6 3a5153 # DarkGrey
+color7 0077C4 # Kubuntu
+color8 bd93f9 #Dracula-purple
+color9 50fa7b #Dracula-green
+
+# Header with base system info
+# stuff after 'TEXT' will be formatted on screen
+own_window_argb_value 0
+own_window_argb_visual yes
+own_window_colour 000000
+TEXT
+#SYSTEM DETAILS:
+${font Monospace:style=Bold:pixelsize=14}${color8}SYSTEM ${color6}${hr 2}
+${color}${font Monospace:size=9}OS: ${color8}${alignr}Kubuntu 20.04.3 (KDE)
+${color}KERNEL: $alignr$sysname $kernel ($machine)
+${color}UPTIME: $alignr$uptime
+${color}RUNNING PROCESSES: ${alignr}$processes (${color8}$running_processes Executing${color})
+
+${color8}${font Monospace:style=Bold:pixelsize=14}CPU USAGE ${color6}${hr 2 }
+${color}${font Monospace:style=Bold:pixelsize=10}
+CORE I:                    	CORE II:${font Monospace:size=10}
+${freq}MHz / ${acpitemp}°C ${color}(${cpu cpu0}%)  ${color}${freq}MHz / ${acpitemp}°C ${color}(${cpu cpu1}%)    
+${color9}${cpubar 5,120 cpu0}       ${color9}${cpubar 5,120 cpu1}
+${color}${font Monospace:style=Bold:pixelsize=10}
+CORE III:                  	CORE IV:${font Monospace:size=10}
+${freq}MHz / ${acpitemp}°C ${color}(${cpu cpu3}%)  ${color}${freq}MHz / ${acpitemp}°C ${color}(${cpu cpu3}%)
+${color9}${cpubar 5,120 cpu2}       ${color9}${cpubar 5,120 cpu3}
+${color}1st ${color9}${top name 1}${top cpu 1}% ${alignr}${color9}1st ${color9}${top name 2}${top cpu 2}%
+${color}2nd ${color}${top name 3}${top cpu 3}% ${alignr}${color}2nd ${color}${top name 4}${top cpu 4}%
+${color}3rd ${color1}${top name 5}${top cpu 5}% ${alignr}${color1}3rd ${color1}${top name 6}${top cpu 6}%
+${color}4th ${color2}${top name 7}${top cpu 7}% ${alignr}${color2}4th ${color2}${top name 8}${top cpu 8}%
+${color}5th ${color3}${top name 9}${top cpu 9}% ${alignr}${color3}5th ${color3}${top name 10}${top cpu 10}%
+
+${color8}${font :size=10:style=Bold}${alignc}"Talk is cheap. Show me the code"
+${color}${font :size=9}${alignc}(Linus Torvalds)
+
+${color6}${hr 2 }

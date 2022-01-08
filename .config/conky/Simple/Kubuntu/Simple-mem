@@ -1,0 +1,128 @@
+#==============================================================================
+#			Simple Conky - Manjaro			
+
+#	Date  :02/11/2021
+#	Author:iamvk1437k
+#	repo  :https://github.com/iamvk1437k/linuxdotfilesvk
+#==============================================================================
+# conky configuration
+
+# Set to yes if you want Conky to be forked in the background
+background yes
+
+# Update interval in seconds
+update_interval 1
+
+# number of cpu samples to average
+# set to 1 to disable averaging
+cpu_avg_samples 2
+
+# number of net samples to average
+# set to 1 to disable averaging
+net_avg_samples 2
+
+# Subtract file system buffers from used memory?
+no_buffers yes
+double_buffer yes
+text_buffer_size 2048
+
+# Add spaces to keep things from moving about?  This only affects certain objects.
+use_spacer right
+
+# This is the number of times Conky will update before quitting.
+# Set to zero to run forever.
+total_run_times 0
+
+# Gap between borders of screen and text
+# same thing as passing -x at command line
+gap_x 40
+gap_y 80
+
+# Minimum size of text area
+minimum_size 100 50
+maximum_width 600
+
+
+# Create own window instead of using desktop (required in nautilus)
+own_window yes
+own_window_type dock
+own_window_transparent yes
+own_window_argb_visual yes
+own_window_argb_visual no
+own_window_colour 000000
+own_window_argb_value 0
+own_window_hints undecorated,below,sticky,skip_taskbar,skip_pager
+
+# Text alignment, other possible values are commented
+alignment top_left
+#alignment top_right
+#alignment bottom_left
+#alignment bottom_right
+
+# Draw shades?
+draw_shades no
+
+# Draw outlines?
+draw_outline no
+
+# Draw borders around text
+draw_borders no
+draw_graph_borders no
+
+# Stippled borders?
+stippled_borders 0
+
+# border margins
+border_margin 4
+
+# border width
+border_width 1
+
+
+# Force UTF8? note that UTF8 support required XFT
+override_utf8_locale yes
+
+# Use Xft?
+use_xft yes
+
+# Xft font when Xft is enabled
+xftfont Bitstream Monospace:size=9
+
+# Text alpha when using Xft
+xftalpha 0.5
+
+# set to yes if you want all text to be in uppercase
+uppercase no
+
+# Default colors and also border colors
+default_color white
+default_shade_color black
+default_outline_color white
+# Shades of Gray
+color1 f8f8f2 #Dracula-Foreground
+color2 AAAAAA
+color3 888888 
+color4 ffb86c # Dracula-Orange
+color5 8be9fd # Dracula-Cryn
+color6 3a5153 # DarkGrey
+color7 0077C4 # Kubuntu
+color8 bd93f9 #Dracula-purple
+color9 50fa7b #Dracula-green
+
+# Header with base system info
+# stuff after 'TEXT' will be formatted on screen
+own_window_argb_value 0
+own_window_argb_visual yes
+own_window_colour 000000
+TEXT
+${color8}${font Monospace:style=Bold:pixelsize=14}MEMORY USAGE ${color6}${hr 2 }
+${color}${font Monospace:size=9}
+${color}${font Monospace:style=Bold:pixelsize=12}RAM:${alignc}$mem / $memmax ($memperc%)${color9}${font Monospace:style=regular:size=10} ${alignr}${membar 5,120}
+${color}${font Monospace:style=Bold:pixelsize=12}SWAP:${alignc}$swap / $swapmax ($swapperc%)${color9}${font Monospace:style=regular:size=10} ${alignr}${swapbar 5,120}
+${color}1st ${color9}${top_mem name 1}${top_mem mem_res 1} ${top_mem pid 1} ${alignc}${color}6th ${color9}${top_mem name 6}${top_mem mem_res 6}${top_mem pid 6}
+${color}2nd ${color}${top_mem name 2}${top_mem mem_res 2} ${top_mem pid 2} ${alignc}${color}7th ${color}${top_mem name 7}${top_mem mem_res 7}${top_mem pid 7}
+${color}3rd ${color1}${top_mem name 3}${top_mem mem_res 3} ${top_mem pid 3} ${alignc}${color}8th ${color1}${top_mem name 8}${top_mem mem_res 8}${top_mem pid 8}
+${color}4th ${color2}${top_mem name 4}${top_mem mem_res 4} ${top_mem pid 4} ${alignc}${color}9th ${color2}${top_mem name 9}${top_mem mem_res 9}${top_mem pid 9}
+${color}5th ${color3}${top_mem name 5}${top_mem mem_res 5} ${top_mem pid 5} ${alignc}${color}10th ${color3}${top_mem name 10}${top_mem mem_res 10}${top_mem pid 10 }
+
+${color6}${hr 2 }
