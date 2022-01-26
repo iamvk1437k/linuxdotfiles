@@ -54,12 +54,10 @@ own_window_argb_value 0
 own_window_hints undecorated,below,sticky,skip_taskbar,skip_pager
 
 # Text alignment, other possible values are commented
-#alignment top_left
-alignment top_right
+alignment top_left
+#alignment top_right
 #alignment bottom_left
 #alignment bottom_right
-#alignment top_middle
-
 
 # Draw shades?
 draw_shades no
@@ -88,7 +86,7 @@ override_utf8_locale yes
 use_xft yes
 
 # Xft font when Xft is enabled
-xftfont Bitstream Monospace:size=9
+xftfont Bitstream Fira Code:size=9
 
 # Text alpha when using Xft
 xftalpha 0.5
@@ -117,29 +115,14 @@ own_window_argb_value 0
 own_window_argb_visual yes
 own_window_colour 000000
 TEXT
-#SYSTEM DETAILS:
-${font Monospace:style=Bold:pixelsize=14}${color8}SYSTEM ${color6}${hr 2}
-${color}${font Monospace:size=9}OS: ${color8}${alignr}Kubuntu 20.04.3 (KDE)
-${color}KERNEL: $alignr$sysname $kernel ($machine)
-${color}UPTIME: $alignr$uptime
-${color}RUNNING PROCESSES: ${alignr}$processes (${color8}$running_processes Executing${color})
-
-${color8}${font Monospace:style=Bold:pixelsize=14}CPU USAGE ${color6}${hr 2 }
-${color}${font Monospace:style=Bold:pixelsize=10}
-CORE I:                    	CORE II:${font Monospace:size=10}
-${freq}MHz / ${acpitemp}°C ${color}(${cpu cpu0}%)  ${color}${freq}MHz / ${acpitemp}°C ${color}(${cpu cpu1}%)    
-${color9}${cpubar 5,120 cpu0}       ${color9}${cpubar 5,120 cpu1}
-${color}${font Monospace:style=Bold:pixelsize=10}
-CORE III:                  	CORE IV:${font Monospace:size=10}
-${freq}MHz / ${acpitemp}°C ${color}(${cpu cpu3}%)  ${color}${freq}MHz / ${acpitemp}°C ${color}(${cpu cpu3}%)
-${color9}${cpubar 5,120 cpu2}       ${color9}${cpubar 5,120 cpu3}
-${color}1st ${color9}${top name 1}${top cpu 1}% ${alignr}${color9}1st ${color9}${top name 2}${top cpu 2}%
-${color}2nd ${color}${top name 3}${top cpu 3}% ${alignr}${color}2nd ${color}${top name 4}${top cpu 4}%
-${color}3rd ${color1}${top name 5}${top cpu 5}% ${alignr}${color1}3rd ${color1}${top name 6}${top cpu 6}%
-${color}4th ${color2}${top name 7}${top cpu 7}% ${alignr}${color2}4th ${color2}${top name 8}${top cpu 8}%
-${color}5th ${color3}${top name 9}${top cpu 9}% ${alignr}${color3}5th ${color3}${top name 10}${top cpu 10}%
-
-${color8}${font :size=10:style=Bold}${alignc}"Talk is cheap. Show me the code"
-${color}${font :size=9}${alignc}(Linus Torvalds)
+${color8}${font Fira Code:style=Bold:pixelsize=14}MEMORY USAGE ${color6}${hr 2 }
+${color}${font Fira Code:size=9}
+${color}${font Fira Code:style=Bold:pixelsize=12}RAM:${alignc}$mem / $memmax ($memperc%)${color9}${font Fira Code:style=regular:size=10} ${alignr}${membar 5,120}
+${color}${font Fira Code:style=Bold:pixelsize=12}SWAP:${alignc}$swap / $swapmax ($swapperc%)${color9}${font Fira Code:style=regular:size=10} ${alignr}${swapbar 5,120}
+${color}1st ${color9}${top_mem name 1}${top_mem mem_res 1} ${top_mem pid 1} ${alignc}${color}6th ${color9}${top_mem name 6}${top_mem mem_res 6}${top_mem pid 6}
+${color}2nd ${color}${top_mem name 2}${top_mem mem_res 2} ${top_mem pid 2} ${alignc}${color}7th ${color}${top_mem name 7}${top_mem mem_res 7}${top_mem pid 7}
+${color}3rd ${color1}${top_mem name 3}${top_mem mem_res 3} ${top_mem pid 3} ${alignc}${color}8th ${color1}${top_mem name 8}${top_mem mem_res 8}${top_mem pid 8}
+${color}4th ${color2}${top_mem name 4}${top_mem mem_res 4} ${top_mem pid 4} ${alignc}${color}9th ${color2}${top_mem name 9}${top_mem mem_res 9}${top_mem pid 9}
+${color}5th ${color3}${top_mem name 5}${top_mem mem_res 5} ${top_mem pid 5} ${alignc}${color}10th ${color3}${top_mem name 10}${top_mem mem_res 10}${top_mem pid 10 }
 
 ${color6}${hr 2 }
