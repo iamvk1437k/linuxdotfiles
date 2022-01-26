@@ -122,10 +122,18 @@ ${alignr}${color}${fs_used_perc /}% ${color9}${fs_bar 5,120 /}
 ${color1}${font Monospace:style=Bold:pixelsize=12}I/O Read:${alignr}${diskio_read /dev/nvme0n1p3}${alignr}${diskiograph_read nvme0n1p3 8,100}
 ${color}${font Monospace:style=Bold:pixelsize=12}I/O Write:${alignr}${diskio_write /dev/nvme0n1p3}${alignr}${diskiograph_write nvme0n1p3 8,100}
 
-
 ${color}${font Monospace:style=Bold:pixelsize=12}USB HHD(/media/i437k/Linux Disk):${font Monospace:size=10} ${alignr}${fs_used /media/i437k/Linux Disk}/${fs_size /media/i437k/Linux Disk}
 ${alignr}${color}${fs_used_perc /}% ${color9}${fs_bar 5,120 /}
 ${color1}${font Monospace:style=Bold:pixelsize=12}I/O Read:${alignr}${diskio_read /dev/sdb1}${alignr}${diskiograph_read sdb1 8,100}
 ${color}${font Monospace:style=Bold:pixelsize=12}I/O Write:${alignr}${diskio_write /dev/sdb1}${alignr}${diskiograph_write sdb1 8,100}
-${color6}${hr 2 }
 
+${color}${font Fira Code:style=Bold:pixelsize=12}USB HHD(/media/i437k/LinuxDisk2):${font Fira Code:size=10} ${alignr}${fs_used /media/i437k/LinuxDisk2}/${fs_size /media/i437k/LinuxDisk2}
+${alignr}${color}${fs_used_perc /media/i437k/Linux Disk}% ${color9}${fs_bar 5,120 /media/i437k/LinuxDisk2}
+${color1}${font Fira Code:style=Bold:pixelsize=12}I/O Read:${alignr}${diskio_read /dev/sdb3}${alignr}${diskiograph_read sdb3 8,100}
+${color}${font Fira Code:style=Bold:pixelsize=12}I/O Write:${alignr}${diskio_write /dev/sdb3}${alignr}${diskiograph_write sdb3 8,100}
+
+${color}${font Fira Code:style=Bold:pixelsize=12}USB HHD(/media/i437k/LinuxDisk3):${font Fira Code:size=10} ${alignr}${fs_used /media/i437k/LinuxDisk3}/${fs_size /media/i437k/LinuxDisk3}
+${alignr}${color}${fs_used_perc /media/i437k/LinuxDisk3}% ${color9}${fs_bar 5,120 /media/i437k/LinuxDisk3}
+${color1}${font Fira Code:style=Bold:pixelsize=12}I/O Read:${alignr}${diskio_read /dev/sdb2}${alignr}${diskiograph_read sdb2 8,100}
+${color}${font Fira Code:style=Bold:pixelsize=12}I/O Write:${alignr}${diskio_write /dev/sdb}${alignr}${diskiograph_write sdb2 8,100}
+${color6}${hr 2 }
